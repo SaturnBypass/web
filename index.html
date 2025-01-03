@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>raw.milik-febry.site - Private File Hosting</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #0d1117;
+            color: #c9d1d9;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            border-bottom: 1px solid #30363d;
+        }
+
+        h1 {
+            color: #58a6ff;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #8b949e;
+            font-size: 1.1em;
+        }
+
+        .feature-section {
+            background: #161b22;
+            padding: 25px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            border: 1px solid #30363d;
+        }
+
+        .feature-section h2 {
+            color: #58a6ff;
+            margin-bottom: 15px;
+        }
+
+        .code-block {
+            background: #0d1117;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Consolas', monospace;
+            overflow-x: auto;
+            border: 1px solid #30363d;
+            margin: 10px 0;
+        }
+
+        .example {
+            margin: 20px 0;
+            padding: 15px;
+            background: #1c2128;
+            border-radius: 6px;
+        }
+
+        .note {
+            color: #8b949e;
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        .warning {
+            color: #ff7b72;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ff7b72;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>raw.milik-febry.site</h1>
+            <div class="subtitle">Private File Hosting Service</div>
+        </header>
+
+        <div class="feature-section">
+            <h2>📤 Upload via cURL</h2>
+            <div class="code-block">
+                $ curl -u febry:*** -T file.txt raw.milik-febry.site/upload
+                https://raw.milik-febry.site/raw/a1b2c3d4/file.txt</div>
+            <div class="note">Supports any file type with secure random path generation</div>
+        </div>
+
+        <div class="feature-section">
+            <h2>🔒 Authentication Required</h2>
+            <div class="example">
+                ✓ Basic Authentication<br>
+                ✓ Private Access Control<br>
+                ✓ Secure File Storage
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <h2>🔗 URL Format</h2>
+            <div class="code-block">https://raw.milik-febry.site/raw/[random-path]/[filename]</div>
+            <div class="note">
+                • Random path ensures file privacy<br>
+                • Original filename preserved<br>
+                • Direct download links
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <h2>💻 API Examples</h2>
+            <div class="code-block">
+# Upload file <br>
+curl -u febry:*** -T image.png raw.milik-febry.site/upload
+<br><br>
+# Upload with custom name <br>
+curl -u febry:*** -T "local.txt" raw.milik-febry.site/upload
+<br><br>
+# Download file <br>
+curl -u febry:*** https://raw.milik-febry.site/raw/[path]/[filename]</div>
+        </div>
+
+        <div class="warning">
+            ⚠️ This is a private file hosting service. Unauthorized access attempts will be blocked.
+        </div>
+    </div>
+</body>
+</html>
