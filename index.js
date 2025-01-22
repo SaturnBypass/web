@@ -113,7 +113,7 @@ export default async function handler(req, res) {
     const { pathname } = new URL(req.url, 'http://localhost');
     
     if (pathname === '/') {
-        if (req.method === 'GET') {
+        if (req.method === 'GET' || req.method === 'POST') {
             const filePath = path.join(process.cwd(), 'index.html');
             const fileContent = await fs.readFile(filePath, 'utf8');
             res.status(200).send(fileContent);
