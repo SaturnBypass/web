@@ -114,14 +114,14 @@ export default async function handler(req, res) {
     
     if (pathname === '/') {
         if (req.method === 'GET') {
-            const filePath = path.join(process.cwd(), 'public', 'index.html');
+            const filePath = path.join(process.cwd(), 'index.html');
             const fileContent = await fs.readFile(filePath, 'utf8');
             res.status(200).send(fileContent);
         } else {
             res.status(405).json({ error: 'Method not allowed' });
         }
     } else if (pathname === '/brands') {
-        if (req.method === 'GET') {
+        if (req.method === 'GET' || req.method === 'POST') {
             const isValid = await validateApiKey(req, res);
             if (!isValid) return;
 
@@ -142,7 +142,7 @@ export default async function handler(req, res) {
             res.status(405).json({ error: 'Method not allowed' });
         }
     } else if (pathname === '/ipcheck') {
-        if (req.method === 'GET') {
+        if (req.method === 'GET' || req.method === 'POST') {
             const isValid = await validateApiKey(req, res);
             if (!isValid) return;
 
@@ -193,7 +193,7 @@ export default async function handler(req, res) {
             res.status(405).json({ error: 'Method not allowed' });
         }
     } else if (pathname === '/detectbot') {
-        if (req.method === 'GET') {
+        if (req.method === 'GET' || req.method === 'POST') {
             const isValid = await validateApiKey(req, res);
             if (!isValid) return;
 
